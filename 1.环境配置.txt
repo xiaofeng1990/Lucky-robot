@@ -1,0 +1,73 @@
+1.系统更新
+	sudo apt-get update && sudo apt-get upgrade -y
+2.更新pip
+	wget http://bootstrap.pypa.io/get-pip.py
+	sudo python3 get-pip.py
+3.安装虚拟环境
+	sudo pip3 install virtualenv
+4.安装swig
+	或者手动下载压缩包
+	https://sourceforge.net/projects/swig/files/swig/
+	
+	wget http://hahack-1253537070.file.myqcloud.com/misc/swig-3.0.10.tar.gz
+	tar xvf swig-3.0.10.tar.gz
+	cd swig-3.0.10
+	sudo apt-get install -y alsa-base pulseaudio libsox-fmt-all
+	sudo apt-get install -y libpcre3 libpcre3-dev
+	./configure --prefix=/usr --without-clisp --without-maximum-compile-warnings
+	sudo make && sudo make install
+	sudo install -v -m755 -d /usr/share/doc/swig-3.0.10
+	sudo cp -v -R Doc/* /usr/share/doc/swig-3.0.10
+	sudo apt-get install -y libatlas-base-dev
+	
+5.安装snowboy
+	或者手动下载压缩包
+	https://github.com/kitt-ai/snowboy
+	
+	wget http://hahack-1253537070.file.myqcloud.com/misc/snowboy.tar.bz2
+	tar -xvjf snowboy.tar.bz2
+	cd snowboy/swig/Python3
+	make
+	
+	在工程目录里建立一个snowboy目录，文件结构如下
+	├── README.md
+	├── _snowboydetect.so
+	├── demo.py
+	├── demo2.py
+	├── light.py
+	├── requirements.txt
+	├── resources
+	│   ├── ding.wav
+	│   ├── dong.wav
+	│   ├── common.res
+	│   └── snowboy.umdl
+	├── snowboydecoder.py
+	├── snowboydetect.py
+	└── version
+
+6.创建虚拟环境，为单独的工程创造单独的环境，解决版本冲突。比如不同的python版本， 在工程目录里执行下面命令
+	virtualenv --no-site-packages env
+7.进入虚拟环境
+	激活虚拟环境
+	source env/bin/activate
+	退出虚拟环境
+	deactivate
+
+8.安装依赖
+	sudo apt install python3-pyaudio python-pyaudio -y
+	sudo apt install portaudio19-dev python-all-dev python3-all-dev -y
+9.安装 PyAudio
+	pip install PyAudio
+10.测试麦克风
+	arecord temp.wav	//录音 ctrl + C 退出
+	aplay temp.wav      //播放录音
+11.pip常用命令
+	pip3 install	name	//安装包name， name为包名
+	pip3 uninstall	name	//卸载包name
+
+	pip3 freeze > requirements.txt		//生成依赖包版本文件
+	pip3 install -r requirements.txt	//安装依赖版本
+
+
+
+

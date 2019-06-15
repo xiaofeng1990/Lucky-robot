@@ -1,0 +1,10 @@
+
+sudo apt remove fcitx-module-kimpanel 命令把fcitx-module-kimpanel删掉
+
+killall fcitx-qimpanel 
+ 
+sudo apt-get remove fcitx-ui-qimpanel
+
+重启 
+问题解决！！ 
+或者在 安装了compton

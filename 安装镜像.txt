@@ -1,0 +1,7 @@
+镜像下载
+https://www.raspberrypi.org/downloads/raspbian/
+
+1.先使用格式化工具格式化sd卡
+2.使用win32diskimager刻录镜像
+2018-10-09-raspbian-stretch.zip  桌面系统
+2018-10-09-raspbian-stretch-lite.zip  无桌面系统
