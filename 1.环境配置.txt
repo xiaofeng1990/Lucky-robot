@@ -68,6 +68,7 @@
 	pip3 freeze > requirements.txt		//生成依赖包版本文件
 	pip3 install -r requirements.txt	//安装依赖版本
 
-
+12.关机
+	sudo shutdown -h now
 
 
